@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -14,10 +13,10 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container text-center">
         <div class="row">
             <div class="col">
-                <h1>Password generator</h1>
+                <h1>Password Generator</h1>
 
                 <form action="{% url 'password' %}">
                     <select name="length" id="">
@@ -30,7 +29,7 @@
                         <option value="12" selected="selected">12</option>
                         <option value="13">13</option>
                         <option value="14">14</option>
-                    </select>
+                    </select> Length
                     
                     <br>
                     <input type="checkbox" name="uppercase" id=""> UpperCase
@@ -42,7 +41,9 @@
                     <input type="checkbox" name="special" id=""> Special Characters
                     <br>
 
-                    <input type="submit" value="Generate Password">
+                    <input type="submit" value="Generate Password" class="btn btn-primary">
+                    <br>
+                    <a href="{% url 'about'%}" class="btn btn-info">About</a>
                     
                 </form>
             </div>

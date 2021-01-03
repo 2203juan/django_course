@@ -18,13 +18,12 @@ def password(request):
     if request.GET.get("special"):
         characters.extend(list("!#$%&/()=?¡*;.)"))
     
-    
-
     password_ = ""
-
 
     for _ in range(size):
         password_ += random.choice(characters)
 
-
     return render(request,"generator/password.html", {"password": password_})
+
+def about(request):
+    return render(request,"generator/about.html")
