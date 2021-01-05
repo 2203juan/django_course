@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    {% load static %}
+    <link rel="icon" type="image/png" href="{% static 'portfolio/grafico-circular.png' %}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+     <a class="navbar-brand" href="#">
+      {% load static %}
+      <img src="{% static 'portfolio/grafico-circular.png' %}" alt="Logo" style="width:40px;">
+    </a>
+
+    <a href="#">Home</a>
+    <a href="#">Blog</a>
+    <a href="#">Linkedin</a>
+  </nav>
+
+  <!--Content-->
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

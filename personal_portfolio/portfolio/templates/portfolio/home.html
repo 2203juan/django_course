@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Portafolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Hello portfolio</h1>
-                {% load static %}
-                <img src="{% static 'portfolio/home_background.jpeg' %}" alt="imagen home">
-                {% for p in projects %}
-                    <h2>{{ p.title }}</h2>
-                    <h3>{{ p.description }}</h3>
-                    <img src="{{ p.image.url }}" alt="">
+{% extends 'portfolio/base.html' %}
 
-                {% endfor%}
-            </div>
-        </div>
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <a href="{% url 'blog:all_blogs' %}">Blog</a><br>
+        {% load static %}
+        <a href="{% static 'portfolio/cv.pdf' %}">Resume</a>
+        <h1>Hello portfolio</h1>
+        {% load static %}
+        <img src="{% static 'portfolio/home_background.jpeg' %}" alt="imagen home">
+        {% for p in projects %}
+            <h2>{{ p.title }}</h2>
+            <h3>{{ p.description }}</h3>
+            <img src="{{ p.image.url }}" alt="">
+
+        {% endfor%}
     </div>
-</body>
-</html>
+</div>
+{% endblock %}
