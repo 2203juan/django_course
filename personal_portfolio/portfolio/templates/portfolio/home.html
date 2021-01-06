@@ -1,23 +1,184 @@
 {% extends 'portfolio/base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Juan Jose Hoyos{% endblock %}
 
 
 {% block content %}
+<!--Profile-->
 <div class="row">
     <div class="col">
-        <a href="{% url 'blog:all_blogs' %}">Blog</a><br>
-        {% load static %}
-        <a href="{% static 'portfolio/cv.pdf' %}">Resume</a>
-        <h1>Hello portfolio</h1>
-        {% load static %}
-        <img src="{% static 'portfolio/home_background.jpeg' %}" alt="imagen home">
-        {% for p in projects %}
-            <h2>{{ p.title }}</h2>
-            <h3>{{ p.description }}</h3>
-            <img src="{{ p.image.url }}" alt="">
-
-        {% endfor%}
+        <h1 class="text-center"><strong>Juan José Hoyos Urcué</strong></h1>
+        <h5 class="text-center text-primary">9° semester student of Computer and Systems Engineering at Javeriana Cali
+            University</h5>
+        <h5 class="text-center text-primary"><a href="mailto:hege@example.com">juanjohupuj@javerianacali.edu.co</a></h5>
+        <h5 class="text-center text-primary"><a href="tel:123-456-7890">+57 315 772 92 87</a></h5>
     </div>
 </div>
+
+<div class="row">
+    <div class="col">
+        <h2><strong>Profile</strong></h2>
+        <p class="text-justify" style="font-size:1rem;">I am passionate about optimizing production
+            processes in
+            companies and contributing to their growth. Using
+            data analysis, I can find patterns, projections and even predictions that are innately invisible
+            in the
+            data, I convert data into information and information into knowledge, which I can take to
+            productive
+            environments where it is useful, assisting in making decisions whit scientific base </p>
+    </div>
+</div>
+<!--Skills-->
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        {% load static %}
+        <img src="{% static 'portfolio/dWcdIe4.jpeg' %}" style="width: 290px; height: 350px;" class="rounded float-left"
+            alt="">
+        <br><br>
+    </div>
+
+
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        <h2><strong>Hard Skills</strong></h2>
+        <br>
+        <ul>
+            <li class="">Data Analysis</li>
+
+            <li class="">Machine Learning</li>
+
+            <li class="">Big Data Processing</li>
+
+            <li class="">Software Development</li>
+
+            <li class="">Analysis and Design of Algorithms</li>
+
+            <li class="">Data Structures</li>
+        </ul>
+    </div>
+
+    <div class="col-xs-12 col-md-6 col-lg-4">
+        <h2><strong>Soft Skills</strong></h2>
+        <ul>
+            <li class="">Assertive Communication</li>
+
+            <li class="">Teamwork</li>
+
+            <li class="">Open to New Challenges</li>
+
+            <li class="">Curious</li>
+
+            <li class="">Analytical Thinking</li>
+
+            <li class="">Resilient</li>
+
+            <li class="">Honest</li>
+
+            <li class="">Creative</li>
+        </ul>
+    </div>
+</div>
+
+<!--Technologies-->
+<div class="row">
+    <div class="col">
+        <h1 class="text-center"><strong>Programming Languages</strong></h1>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <!--Programming Languages-->
+        <div class="col-6 col-sm-6 col-xs-4 col-md-4 col-lg-4">
+            {% load static %}
+            <img src="{% static 'portfolio/tech/python.png' %}" style="width: 6rem; height: auto;" alt="">
+            <div class="container">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-xs-4 col-md-4 col-lg-4">
+            {% load static %}
+            <img src="{% static 'portfolio/tech/r.png' %}" style="width: 6rem; height: auto;" alt="">
+            <div class="container">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-xs-4 col-md-4 col-lg-4">
+            {% load static %}
+            <img src="{% static 'portfolio/tech/cpp.png' %}" style="width: 5.5rem; height: auto; margin-left: 1rem;"
+                alt="">
+            <div class="container">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Libraries and other tech-->
+<div class="row">
+    <div class="col">
+        <h1 class="text-center"><strong>Libraries and other Technologies</strong></h1>
+    </div>
+</div>
+
+<!---->
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-sm-6 col-xs-3 col-md-3 col-lg-3">
+            <div class="container">
+                {% load static %}
+                <img src="{% static 'portfolio/tech/sql.jpg' %}" style="width: 4rem; height: auto;" alt="">
+            </div>
+            <div class="container">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-xs-3 col-md-3 col-lg-3">
+            {% load static %}
+            <img src="{% static 'portfolio/tech/sklearn.png' %}" style="width: 10rem; height: auto;" alt="">
+            <div class="container">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+            </div>
+        </div>
+
+
+
+        <div class="col-6 col-sm-6 col-xs-3 col-md-3 col-lg-3">
+            {% load static %}
+            <img src="{% static 'portfolio/tech/spark.png' %}" style="width: 10rem; height: auto;" alt="">
+            <div class="container">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+            </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-xs-3 col-md-3 col-lg-3">
+            <div class="container">
+                {% load static %}
+                <img src="{% static 'portfolio/tech/html.png' %}" style="width: 5rem; height: auto;" alt="">
+            </div>
+            <div class="container">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col">
+        <footer>
+            <p>Author: Juan José Hoyos Urcué</p>
+            <p>Using HTML5, Boostrap 4 & Django</p>
+            <p><a href="mailto:hege@example.com">juanjohupuj@javerianacali.edu.co</a></p>
+          </footer>
+    </div>
+</div>
+
 {% endblock %}

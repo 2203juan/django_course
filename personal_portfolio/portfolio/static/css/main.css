@@ -1,0 +1,29 @@
+body {
+    padding-top: 100px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+
+}
+
+
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+
+    /* the rest of your styling */
+}
+
+.tech {
+    width: 1px;
+    height: 1px;
+}
+
+.rating > span:hover:before {
+    content: "\2605";
+    position: absolute;
+ }
+
+ 
