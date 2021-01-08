@@ -4,20 +4,20 @@
 
 
 {% block content %}
+
 <div class="row">
     <div class="col">
-        <a href="{% url 'blog:all_blogs' %}">Blog</a><br>
-        {% load static %}
-        <a href="{% static 'portfolio/cv.pdf' %}">Resume</a>
-        <h1>Hello portfolio</h1>
-        {% load static %}
-        <img src="{% static 'portfolio/home_background.jpeg' %}" alt="imagen home">
-        {% for p in projects %}
-            <h2>{{ p.title }}</h2>
-            <h3>{{ p.description }}</h3>
-            <img src="{{ p.image.url }}" alt="">
-
-        {% endfor%}
+        <h1 class="text-center"><strong>Portfolio</strong></h1>
     </div>
+</div>
+
+<div class="row">
+    {% for p in projects %}
+    <div class="col">
+        <h2 class="text-primary">{{ p.title }}</h2>
+        <img src="{{ p.image.url }}" alt="" style="width: 20rem; height: auto;">
+        <p class="text-justify" style="font-size:1rem;">{{ p.description }}</p>
+    </div>
+    {% endfor%}
 </div>
 {% endblock %}
