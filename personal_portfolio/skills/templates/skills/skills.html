@@ -1,0 +1,71 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Skills{% endblock %}
+
+
+{% block content %}
+<!--Skills-->
+
+<div class="row">
+    <div class="col">
+        <h1 class="text-center"><strong>Skills</strong></h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-6">
+        <h2 class="text-center text-white bg-primary rounded"><strong>Hard Skills</strong></h2>
+        <ul class="">
+            {% for item in hard %}
+            <li>{{ item.title }}</li>
+            {% endfor%}
+        </ul>
+        <br>
+    </div>
+
+    <div class="col-xs-12 col-md-6 col-lg-6">
+        <h2 class="text-center text-white bg-primary rounded"><strong>Soft Skills</strong></h2>
+        <ul class="">
+            {% for item in soft %}
+
+            <li class="text-justify">{{ item.title }}</li>
+            {% endfor%}
+        </ul>
+        <br>
+    </div>
+</div>
+
+<!--Programming Languages-->
+
+<div class="row">
+    <div class="col">
+        <h1 class="text-center"> <strong>Programming Languages</strong> </h1>
+    </div>
+</div>
+
+
+<div class="row">
+    {% for item in lang %}
+    <div class="col-6 col-sm-6 col-xs-4 col-md-4 col-lg-4 text-center">
+        <img src="{{ item.image.url }}" alt="" style="width: 10rem; height: auto;">
+        <h2 class="text-center">{{ item.level }}</h2>
+    </div>
+    {% endfor%}
+</div>
+
+<div class="row">
+    <div class="col">
+        <h1 class="text-center"> <strong>Other Skills and Technologies</strong> </h1>
+    </div>
+</div>
+
+<div class="row">
+    {% for item in others %}
+    <div class="col-6 col-sm-6 col-xs-4 col-md-4 col-lg-4 text-center">
+        <img src="{{ item.image.url }}" alt="" style="width: 10rem; height: auto;">
+        <h2 class="text-center">{{ item.level }}</h2>
+    </div>
+    {% endfor%}
+</div>
+
+{% endblock %}

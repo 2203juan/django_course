@@ -1,0 +1,26 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}Education{% endblock %}
+
+
+{% block content %}
+<!--Education-->
+
+<div class="row">
+    <div class="col">
+        <h1 class="text-center"><strong>Education</strong></h1>
+    </div>
+</div>
+
+<div class="row">
+    {% for item in education %}
+    <div class="col">
+        <h4 class="text-primary">{{ item.title }}</h4>
+        <img src="{{ item.image.url }}" alt="" style="width: 20rem; height: auto;">
+        <h3><strong>{{ item.date_start }} - {{ item.date_end }}</strong></h3>
+        <h4><strong>{{ item.institution }}</strong></h4>
+        <br>
+    </div>
+    {% endfor%}
+</div>
+{% endblock %}
