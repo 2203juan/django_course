@@ -5,3 +5,7 @@ from .models import Education
 def education(request):
     education = Education.objects.all()
     return render(request,"education/education.html", {"education": education})
+
+def education_eng(request):
+    education = Education.objects.all()
+    return render(request,"education/education_eng.html", {"education": education})
