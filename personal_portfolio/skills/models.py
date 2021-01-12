@@ -26,3 +26,13 @@ class Other(models.Model):
 
     def __str__(self):
         return self.title
+
+class Tecnica(models.Model):
+    titulo = models.CharField(max_length = 100)
+    def __str__(self):
+        return self.titulo
+
+class Blanda(models.Model):
+    titulo = models.CharField(max_length = 100)
+    def __str__(self):
+        return self.titulo

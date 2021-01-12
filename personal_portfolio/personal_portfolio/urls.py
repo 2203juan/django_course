@@ -23,7 +23,9 @@ from portfolio import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = "home"),
+    path('en/', views.home_eng, name = "home_eng"),
     path('portfolio/', views.portfolio, name = "portfolio"),
+    path('portfolio/en', views.portfolio_eng, name = "portfolio_eng"),
     path('blog/', include('blog.urls')),
     path('education/', include('education.urls')),
     path('skills/', include('skills.urls')),

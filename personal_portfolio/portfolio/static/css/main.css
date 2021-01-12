@@ -26,3 +26,14 @@ body {
     position: absolute;
  }
 
+body.color {
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-white-simple-artificial-intelligence-technology-promotion-banner-poster-image_194342.jpg");
+}
+
+div.color {
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-white-simple-artificial-intelligence-technology-promotion-banner-poster-image_194342.jpg");
+}
+
+.home_text{
+    color:#0092C5;
+  }
